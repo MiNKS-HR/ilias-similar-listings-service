@@ -37,4 +37,3 @@ npm install -g webpack
 npm install
 ```
 
-# ilias-similar-listings-service
