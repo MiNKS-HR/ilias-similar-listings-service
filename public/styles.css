@@ -1,0 +1,68 @@
+.simExpApp {
+  max-width: 1032px;
+}
+
+.simExpMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 275px;
+  margin-left: 8px;
+  margin-left: 8px;
+}
+.simExpHeadline {
+  padding-left: 14px;
+ }
+.singleExperience_container {
+  display: flex;
+  justify-content: center;
+  width: 237px;
+  height: 278px;
+  padding: 0 6px 30px 6px;
+}
+
+.singleExperience_inner_container {
+
+}
+
+.singleExperience_img {
+  margin: auto;
+}
+
+.slick-initialized,
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-next:before, 
+.slick-prev:before {
+  color: grey;
+  opacity: 1;
+  font-size: 35px;
+}
+
+.slick-next.slick-disabled:before,
+.slick-prev.slick-disabled:before {
+  opacity: 0;
+}
+
+.slick-next,
+.slick-prev {
+  top: 79px;
+}
+
+.slick-prev {
+  left: -15px;
+  z-index: 1000;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
