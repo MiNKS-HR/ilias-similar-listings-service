@@ -6,6 +6,7 @@ var similarExperience = mongoose.Schema({
   experience_location: String,
   experience_title: String,
   experience_rating_average: Number,
+  experience_price: Number,
   experience_rating_count: Number,
   experience_photo_url: String
 });
@@ -20,6 +21,10 @@ function findOne(id, callback) {
   SimExperience.find({id: id}).then((result) => callback(result));
 }
 
+function findLocation(loc, callback) {
+  SimExperience.find({experience_location: loc}).limit(16).then((result) => callback(result));
+}
+
 function insert(experiences, callback) {
   SimExperience.create(experiences, callback);
 }
@@ -27,4 +32,5 @@ function insert(experiences, callback) {
 exports.findOne = findOne;
 exports.findAll = findAll;
 exports.insert = insert;
+exports.findLocation = findLocation;
 exports.SimExperience = SimExperience;

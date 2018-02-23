@@ -15,14 +15,22 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname + '/../public')));
 
-app.post('/experience/similar', function(req, res) {
-  let id = req.body.params.ID;
+app.get('/experience/similar/:id', function(req, res) {
+  let id = req.params.id;
   simExp.findOne(id, function(exp) {
-    //console.log(exp);
+    console.log(exp);
     res.status(200).send(exp);
   })
 });
 
+app.get('/experience/similar/location/:location', function(req, res) {
+  let loc = req.params.location;
+  console.log(loc);
+  simExp.findLocation(loc, function(exp) {
+    console.log(exp);
+    res.status(200).send(exp);
+  })
+});
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

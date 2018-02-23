@@ -10,39 +10,60 @@ class SimilarExperience extends React.Component {
     super();
 
     this.state = {
-      count: [1,1,1,1,1,1,1,1]
+      currentMainExperience: {},
+      currentSimilarExperiences: []
     }
     this.fetch = this.fetch.bind(this);
+    this.fetchLocations = this.fetchLocations.bind(this);
+    this.createSimilar = this.createSimilar.bind(this);
+    this.createMain = this.createMain.bind(this);
   }
 
-  componentDidMount () {
-    this.fetch();
+  componentDidMount() {
+    this.createMain(7);
+    this.createSimilar("United States");
   }
 
 
-  fetch () {
-    axios.post('/experience/similar', {
-      params: {
-        ID: 1
-      }
-    })
+  fetch(id, callback) {
+    axios.get( `/experience/similar/${id}`)
     .then(function (response) {
       console.log('Success', response.data);
+      callback(response.data)
     })
     .catch(function (error) {
       console.log('Errorhhhh', error);
     });
-    // $.ajax({
-    //   url: 'http://localhost:3003/experience/similar',
-    //   method: 'GET',
-    //   success: (result) => {
-    //     console.log('Success', result);
-    //   },
-    //   error: (err) => {
-    //     console.log('Error', err);
-    //   }
-    // })
   }
+
+  fetchLocations(loc, callback) {
+    axios.get(`/experience/similar/location/${loc}`)
+    .then(function (response) {
+      console.log('Success', response.data);
+      callback(response.data)
+    })
+    .catch(function (error) {
+      console.log('Errorhhhh', error);
+    });
+  }
+
+  createMain (id) {
+    this.fetch(id, (data) => {
+      this.setState({
+        currentMainExperience: data[0]
+      });
+    })
+  }
+
+  createSimilar(loc) {
+    this.fetchLocations(loc, (data) => {
+      this.setState({
+        currentSimilarExperiences: data
+      });
+    })
+
+  }
+
 
   render () {
     const settings =  {
@@ -79,15 +100,21 @@ class SimilarExperience extends React.Component {
     return (
       <div className="simExpApp">
         <div className="simExpHeadline">
-          <h1>Similar Experiences in Bali</h1>
+          <h1>Similar Experiences in <span>{this.state.currentMainExperience.experience_location}</span></h1>
         </div>
         <div className="simExpMain">
-         <Slider {...settings}>
-          {this.state.count.map((item, index) => {
-            return  <div><SingleExperience key={index}/></div>
+         {this.state.currentSimilarExperiences.length > 0 && <Slider {...settings}>
+          {this.state.currentSimilarExperiences.map((item, index) => {
+            return  <div key={index}>
+                      <SingleExperience 
+                        currentSimExperience={item} 
+                        currentMainExperience={this.state.currentMainExperience}
+                        
+                        />
+                    </div>
           })
           }
-        </Slider>
+        </Slider>}
         </div>
       </div>
     ) 

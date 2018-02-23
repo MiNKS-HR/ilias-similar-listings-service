@@ -13,6 +13,13 @@
 }
 .simExpHeadline {
   padding-left: 14px;
+  font-weight: 700;
+  color: #484848;
+  font-size: 1em;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+  padding-bottom: 2px;
+  padding-top: 2px;
  }
 .singleExperience_container {
   display: flex;
@@ -25,6 +32,42 @@
 .singleExperience_inner_container {
 
 }
+
+.singleExperience_title {
+  color: #484848;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+
+.singleExperience_price {
+  color: #484848;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+}
+
+.singleExperience_ratingCount {
+  display: inline;
+  color: #484848;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.singleExperience_categoryPlace{
+  color: rgb(208, 26, 6);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px
+}
+
+
 
 .singleExperience_img {
   margin: auto;
@@ -60,6 +103,10 @@
 
 .slick-next {
   right: 10px;
+}
+
+i  {
+  font-size: 9px;
 }
 
 * {
