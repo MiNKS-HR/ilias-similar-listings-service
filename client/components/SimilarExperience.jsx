@@ -13,6 +13,7 @@ class SimilarExperience extends React.Component {
       currentMainExperience: {},
       currentSimilarExperiences: []
     }
+    
     this.fetch = this.fetch.bind(this);
     this.fetchLocations = this.fetchLocations.bind(this);
     this.createSimilar = this.createSimilar.bind(this);
@@ -20,8 +21,8 @@ class SimilarExperience extends React.Component {
   }
 
   componentDidMount() {
-    this.createMain(7);
-    this.createSimilar("United States");
+    this.createMain(1);
+    this.createSimilar("China");
   }
 
 

@@ -24,7 +24,7 @@ var getArrayOfAllPictureLinks = function() {
       photos.forEach(function(str) {
         var filename =  str.split('.png').join('').split('/').join('').substring(str.length-21);
         console.log('Downloading ' + filename);
-        download(str, __dirname + `/pictures/${filename}.png`, function(){console.log('Finished Downloading' + filename)});
+        download(str, __dirname + `/client/pictures/${filename}.png`, function(){console.log('Finished Downloading' + filename)});
     });
   });
 };
@@ -37,11 +37,6 @@ var download = function(url, dest, callback){
 
 };
 
-// urlList.forEach( function(str) {
-//   var filename =  str.split('/').pop();
-//   console.log('Downloading ' + filename);
-//   download(str, filename, function(){console.log('Finished Downloading' + filename)});
-// });
 
 // download('http://dummyimage.com/235x158.png/dddddd/000000', './pictures/google.png', function(){
 //   console.log('done');

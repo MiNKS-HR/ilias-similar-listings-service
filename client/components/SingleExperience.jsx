@@ -27,13 +27,15 @@ class SingleExperience extends React.Component {
           <div className="singleExperience_categoryPlace"><span>{this.props.currentSimExperience.experience_category}</span> · <span>{this.props.currentSimExperience.experience_location}</span></div>
           <div className="singleExperience_title">{this.props.currentSimExperience.experience_title}</div>
           <div className="singleExperience_price">$<span>{this.props.currentSimExperience.experience_price}</span> per person</div>
-          <div className="singleExperience_rating"><StarRatingComponent 
-                                                      name={this.props.currentSimExperience._id}
-                                                      value={this.props.currentSimExperience.experience_rating_average}
-                                                      editing={false}
-                                                      starColor={'#008489'}
-                                                      emptyStarColor={'#D8D8D8'}
-                                                      /><div className="singleExperience_ratingCount">{this.props.currentSimExperience.experience_rating_count}</div></div>
+          <div className="singleExperience_rating">
+            <StarRatingComponent 
+              name={this.props.currentSimExperience._id}
+              value={this.props.currentSimExperience.experience_rating_average}
+              editing={false}
+              starColor={'#008489'}
+              emptyStarColor={'#D8D8D8'}
+              />
+            <div className="singleExperience_ratingCount">{this.props.currentSimExperience.experience_rating_count}</div></div>
         </div>
       </div>
     )
