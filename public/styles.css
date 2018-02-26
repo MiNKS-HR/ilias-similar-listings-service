@@ -21,10 +21,11 @@
   padding-bottom: 2px;
   padding-top: 2px;
  }
+
+ /*taken out width of 237px*/
 .singleExperience_container {
   display: flex;
   justify-content: center;
-  width: 237px;
   height: 278px;
   padding: 0 6px 30px 6px;
 }
@@ -83,7 +84,7 @@
 .slick-prev:before {
   color: grey;
   opacity: 1;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .slick-next.slick-disabled:before,

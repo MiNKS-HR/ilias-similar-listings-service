@@ -84,7 +84,7 @@ class SimilarExperience extends React.Component {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 770,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
