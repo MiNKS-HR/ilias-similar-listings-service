@@ -37,4 +37,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test sleep 5 && nc -vz localhost 27017
+      - run: yarn seed_database && sleep 5
+      - run: yarn test
+
