@@ -53,6 +53,7 @@
     "enzyme": "^3.3.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^22.4.2",
+    "mockingoose": "^2.8.2",
     "react-test-renderer": "^16.2.0",
     "should": "^13.2.1",
     "superagent": "^3.8.2",
