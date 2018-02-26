@@ -29,7 +29,7 @@ class SingleExperience extends React.Component {
           <div className="singleExperience_price">$<span>{this.props.currentSimExperience.experience_price}</span> per person</div>
           <div className="singleExperience_rating">
             <StarRatingComponent 
-              name={this.props.currentSimExperience._id}
+              name={'ratingStars'}
               value={this.props.currentSimExperience.experience_rating_average}
               editing={false}
               starColor={'#008489'}

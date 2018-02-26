@@ -70,7 +70,7 @@ ShallowWrapper {
           <StarRatingComponent
             editing={false}
             emptyStarColor="#D8D8D8"
-            name={undefined}
+            name="ratingStars"
             starColor="#008489"
             starCount={5}
             value={1}
@@ -128,7 +128,7 @@ ShallowWrapper {
             <StarRatingComponent
               editing={false}
               emptyStarColor="#D8D8D8"
-              name={undefined}
+              name="ratingStars"
               starColor="#008489"
               starCount={5}
               value={1}
@@ -255,7 +255,7 @@ ShallowWrapper {
               <StarRatingComponent
                 editing={false}
                 emptyStarColor="#D8D8D8"
-                name={undefined}
+                name="ratingStars"
                 starColor="#008489"
                 starCount={5}
                 value={1}
@@ -277,7 +277,7 @@ ShallowWrapper {
               "props": Object {
                 "editing": false,
                 "emptyStarColor": "#D8D8D8",
-                "name": undefined,
+                "name": "ratingStars",
                 "starColor": "#008489",
                 "starCount": 5,
                 "value": 1,
@@ -352,7 +352,7 @@ ShallowWrapper {
             <StarRatingComponent
               editing={false}
               emptyStarColor="#D8D8D8"
-              name={undefined}
+              name="ratingStars"
               starColor="#008489"
               starCount={5}
               value={1}
@@ -410,7 +410,7 @@ ShallowWrapper {
               <StarRatingComponent
                 editing={false}
                 emptyStarColor="#D8D8D8"
-                name={undefined}
+                name="ratingStars"
                 starColor="#008489"
                 starCount={5}
                 value={1}
@@ -537,7 +537,7 @@ ShallowWrapper {
                 <StarRatingComponent
                   editing={false}
                   emptyStarColor="#D8D8D8"
-                  name={undefined}
+                  name="ratingStars"
                   starColor="#008489"
                   starCount={5}
                   value={1}
@@ -559,7 +559,7 @@ ShallowWrapper {
                 "props": Object {
                   "editing": false,
                   "emptyStarColor": "#D8D8D8",
-                  "name": undefined,
+                  "name": "ratingStars",
                   "starColor": "#008489",
                   "starCount": 5,
                   "value": 1,
