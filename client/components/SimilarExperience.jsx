@@ -33,7 +33,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      console.log('Errorhhhh', error);
+      //console.log('Errorhhhh', error);
     });
   }
 
@@ -44,7 +44,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      console.log('Errorhhhh', error);
+      //console.log('Errorhhhh', error);
     });
   }
 
