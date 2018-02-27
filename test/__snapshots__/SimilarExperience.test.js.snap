@@ -83,6 +83,7 @@ ShallowWrapper {
         </div>
       </div>,
       "className": "singleExperience_container",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Object {
@@ -365,6 +366,7 @@ ShallowWrapper {
           </div>
         </div>,
         "className": "singleExperience_container",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Object {

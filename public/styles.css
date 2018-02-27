@@ -24,6 +24,7 @@
 
  /*taken out width of 237px*/
 .singleExperience_container {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   height: 278px;

@@ -7,19 +7,31 @@ const bodyParser = require('body-parser');
 //const port = process.env.PORT || 3003;
 var simExp = require('../db/model.js');
 
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
+const config = require('../webpack.config.js');
+const compiler = webpack(config);
+
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath
+}));
+
 mongoose.connect('mongodb://localhost/experiences');
 
 app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded({ extended: false }))
+
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname + '/../public')));
 
 app.get('/experience/similar/:id', function(req, res) {
   let id = req.params.id;
+  console.log('URURURUURRL', req.url)
   simExp.findOne(id, function(exp) {
     //console.log(exp);
-    res.status(200).send(exp);
+  res.status(200).send(exp);
   })
 });
 

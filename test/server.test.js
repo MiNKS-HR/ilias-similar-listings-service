@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../server/index.js');
 const should = require('should');
+const supertest = require('supertest');
 //var mongoose = require('mongoose');
 // import React from 'react';
 // import { shallow, mount, render, configure } from 'enzyme';
@@ -23,8 +24,17 @@ describe('Test the root path', () => {
           throw err;
         }
       });
-  })
-  //DOES NOT PASS ON CIRCLE CI BUT LOCALLY USING ACTUALY SEEDED DATABASE!
+  });
+
+  test('It should respond to the root path', async () => {
+    const response = await supertest(app).get('/');
+    expect(response.statusCode).toBe(200);
+  });
+  test('It should respond with 404 from a wrong path', async () => {
+    const response = await supertest(app).get('/wrongPath');
+    expect(response.statusCode).toBe(404);
+  });
+  //DOES NOT PASS ON CIRCLE CI YET BUT LOCALLY USING ACTUALY SEEDED DATABASE!
   //UNCOMMENT FOR LOCAL TESTING
   // test('to respond with data from DB', (done) => {
   //   request(app).get('/experience/similar/7').then((result) => {

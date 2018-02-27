@@ -21,7 +21,9 @@ class SingleExperience extends React.Component {
 
   render () {
     return (
-      <div className="singleExperience_container">
+      <div 
+        onClick={() => {this.props.handleSimilarClick(this.props.currentSimExperience.id)}}
+        className="singleExperience_container">
         <div className="singleExperience_inner_container">
           <img className="singleExperience_img" src={this.props.currentSimExperience.experience_photo_url} width="237" height="158" />
           <div className="singleExperience_categoryPlace"><span>{this.props.currentSimExperience.experience_category}</span> · <span>{this.props.currentSimExperience.experience_location}</span></div>

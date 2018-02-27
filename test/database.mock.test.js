@@ -55,8 +55,8 @@ describe('test mongoose SimExperience model', () => {
     return SimExperience
       .find({'experience_category':'Ford'})
       .then(function(result){
-        console.log('MOCK',mock)
-        console.log('RESULT', result)
+        //console.log('MOCK',mock)
+        //console.log('RESULT', result)
         expect(JSON.parse(JSON.stringify(result))).toMatchObject(mock);
         expect(result.toObject()).toHaveProperty('_id')
       });

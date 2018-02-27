@@ -18,11 +18,12 @@ class SimilarExperience extends React.Component {
     this.fetchLocations = this.fetchLocations.bind(this);
     this.createSimilar = this.createSimilar.bind(this);
     this.createMain = this.createMain.bind(this);
+    this.handleSimilarClick = this.handleSimilarClick.bind(this);
   }
 
   componentDidMount() {
     this.createMain(1);
-    this.createSimilar("China");
+    this.createSimilar('United States');
   }
 
 
@@ -33,7 +34,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      //console.log('Errorhhhh', error);
+      console.log('Errorhhhh');
     });
   }
 
@@ -44,7 +45,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      //console.log('Errorhhhh', error);
+      console.log('Errorhhhh');
     });
   }
 
@@ -62,7 +63,11 @@ class SimilarExperience extends React.Component {
         currentSimilarExperiences: data
       });
     })
+  }
 
+  handleSimilarClick (id) {
+    this.createMain(id);
+    this.createSimilar('China');
   }
 
 
@@ -108,6 +113,7 @@ class SimilarExperience extends React.Component {
           {this.state.currentSimilarExperiences.map((item, index) => {
             return  <div key={index}>
                       <SingleExperience 
+                        handleSimilarClick={this.handleSimilarClick}
                         currentSimExperience={item} 
                         currentMainExperience={this.state.currentMainExperience}
                         
