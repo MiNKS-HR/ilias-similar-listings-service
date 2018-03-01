@@ -29,13 +29,13 @@ describe('Test if SingleExperience component ', () => {
 });
 
 describe('Test if calling createMain method', () => {
-  test('calles fetch method once', () => {
-    const wrapper = shallow(<SimilarExperience />);
+  test('calls fetch method once', () => {
+    const wrapper = shallow(<SimilarExperience pathname={'/id/1'} />);
     wrapper.instance().fetch= jest.fn();
     wrapper.update();
     // const anonymous = wrapper.instance().setState;
     wrapper.instance().createMain(1);
-    // console.log(wrapper.instance());
+    console.log(wrapper.instance());
     expect(wrapper.instance().fetch).toHaveBeenCalledTimes(1);
     // expect(wrapper.instance().fetch).toHaveBeenCalledWith(1, anonymous);
   });

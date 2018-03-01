@@ -1,4 +1,5 @@
 
 {
-  "presets": ["env", "react"]
+  "presets": ["env", "react", "es2015", "stage-0"],
+  "plugins": ["transform-es2015-arrow-functions"]
 }

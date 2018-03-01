@@ -16,7 +16,7 @@ class SingleExperience extends React.Component {
   } 
 
   componentDidMount() {
-    Vibrant.from('http://res.cloudinary.com/dkchqxebb/image/upload/v1519349821/sample.jpg').getPalette((err, palette) => console.log(palette))
+    //Vibrant.from('http://res.cloudinary.com/dkchqxebb/image/upload/v1519349821/sample.jpg').getPalette((err, palette) => console.log(palette))
   }
 
   render () {
@@ -26,7 +26,7 @@ class SingleExperience extends React.Component {
         className="singleExperience_container">
         <div className="singleExperience_inner_container">
           <img className="singleExperience_img" src={this.props.currentSimExperience.experience_photo_url} width="237" height="158" />
-          <div className="singleExperience_categoryPlace"><span>{this.props.currentSimExperience.experience_category}</span> · <span>{this.props.currentSimExperience.experience_location}</span></div>
+          <div className="singleExperience_categoryPlace"><span>{this.props.currentSimExperience.experience_category.toUpperCase()}</span> · <span>{this.props.currentSimExperience.experience_location.toUpperCase()}</span></div>
           <div className="singleExperience_title">{this.props.currentSimExperience.experience_title}</div>
           <div className="singleExperience_price">$<span>{this.props.currentSimExperience.experience_price}</span> per person</div>
           <div className="singleExperience_rating">

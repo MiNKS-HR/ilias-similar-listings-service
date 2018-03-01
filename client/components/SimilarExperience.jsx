@@ -1,17 +1,20 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import SingleExperience from './SingleExperience.jsx';
 import Slider from 'react-slick';
 import axios from 'axios';
 import $ from 'jquery';
-
+//import createHistory from 'history/createBrowserHistory';
+import history from '../history.js';
+ 
 
 class SimilarExperience extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       currentMainExperience: {},
-      currentSimilarExperiences: []
+      currentSimilarExperiences: [],
     }
     
     this.fetch = this.fetch.bind(this);
@@ -22,10 +25,19 @@ class SimilarExperience extends React.Component {
   }
 
   componentDidMount() {
-    this.createMain(1);
-    this.createSimilar('United States');
+    console.log(this.props.pathname);
+    history.push(this.props.pathname)
+    this.createMain(this.props.pathname.substr(4));
+    this.createSimilar('China');
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.pathname !== this.props.pathname) {
+      console.log(nextProps.pathname.substr(4));
+      this.createMain(nextProps.pathname.substr(4));
+      this.createSimilar('United States');
+    }
+  }
 
   fetch(id, callback) {
     axios.get( `/experience/similar/${id}`)
@@ -66,8 +78,9 @@ class SimilarExperience extends React.Component {
   }
 
   handleSimilarClick (id) {
-    this.createMain(id);
-    this.createSimilar('China');
+    // this.createMain(id);
+    // this.createSimilar('China');
+    history.push(`/id/${id}`);
   }
 
 
@@ -128,7 +141,6 @@ class SimilarExperience extends React.Component {
   }
 
 };
-
 
 
 export default SimilarExperience;
