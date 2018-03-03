@@ -51,14 +51,18 @@
   line-height: 18px;
 }
 
+.singleExperience_rating {
+  display: inline-flex;
+}
+
 .singleExperience_ratingCount {
   display: inline;
   color: #484848;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.2px;
-  padding-top: 0;
-  padding-bottom: 10px;
+  padding-top: 3px;
+  padding-left: 2px;
 }
 
 .singleExperience_categoryPlace{

@@ -15,6 +15,7 @@ class SimilarExperience extends React.Component {
     this.state = {
       currentMainExperience: {},
       currentSimilarExperiences: [],
+      slickGoTo:0
     }
     
     this.fetch = this.fetch.bind(this);
@@ -26,7 +27,7 @@ class SimilarExperience extends React.Component {
 
   componentDidMount() {
     console.log(this.props.pathname);
-    history.push(this.props.pathname)
+    //history.push(this.props.pathname)
     this.createMain(this.props.pathname.substr(4));
     this.createSimilar('China');
   }
@@ -36,6 +37,7 @@ class SimilarExperience extends React.Component {
       console.log(nextProps.pathname.substr(4));
       this.createMain(nextProps.pathname.substr(4));
       this.createSimilar('United States');
+      Slider.SlickGoTo(1);
     }
   }
 
@@ -78,9 +80,12 @@ class SimilarExperience extends React.Component {
   }
 
   handleSimilarClick (id) {
-    // this.createMain(id);
-    // this.createSimilar('China');
-    history.push(`/id/${id}`);
+    this.createMain(id);
+    this.createSimilar('China');
+    //history.push(`/id/${id}`);
+    this.setState({
+      slickGoTo:0
+    })
   }
 
 
@@ -88,9 +93,15 @@ class SimilarExperience extends React.Component {
     const settings =  {
       dots: false,
       infinite: false,
-      speed: 300,
+      speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      slickGoTo: this.state.slickGoTo,
+      afterChange: (currentSlide) => {
+        this.setState({
+          slickGoTo:currentSlide
+        });
+      },
       responsive: [
       {
         breakpoint: 1024,

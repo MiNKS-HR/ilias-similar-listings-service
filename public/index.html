@@ -13,11 +13,10 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="http://localhost:3003/bundle.js"></script>
   <script>
-    // With prop passed in
-    // ReactDOM.render(
-    //   React.createElement(SimilarExperience, {test:'test worked'}),
-    //   document.getElementById('similarExperience')
-    // );
+    ReactDOM.render(
+      React.createElement(SimilarExperience, {pathname:'/id/1'}),
+      document.getElementById('similarExperience')
+    );
   </script>
 </body>
 </html>
