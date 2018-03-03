@@ -1,0 +1,628 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if SingleExperience component  has any unexpected DOM changes after code change 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SingleExperience
+    currentSimExperience={
+      Object {
+        "experience_category": "Ford",
+        "experience_location": "China",
+        "experience_photo_url": "http://dummyimage.com/235x158.png/ff4444/ffffff",
+        "experience_price": 416,
+        "experience_rating_average": 1,
+        "experience_rating_count": 326,
+        "experience_title": "Pseudoleistes virescens",
+        "id": 1,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="singleExperience_inner_container"
+      >
+        <img
+          className="singleExperience_img"
+          height="158"
+          src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+          width="237"
+        />
+        <div
+          className="singleExperience_categoryPlace"
+          style={
+            Object {
+              "color": "#000",
+            }
+          }
+        >
+          <span>
+            FORD
+          </span>
+           · 
+          <span>
+            CHINA
+          </span>
+        </div>
+        <div
+          className="singleExperience_title"
+        >
+          Pseudoleistes virescens
+        </div>
+        <div
+          className="singleExperience_price"
+        >
+          $
+          <span>
+            416
+          </span>
+           per person
+        </div>
+        <div
+          className="singleExperience_rating"
+        >
+          <StarRatingComponent
+            editing={false}
+            emptyStarColor="#D8D8D8"
+            name="ratingStars"
+            starColor="#008489"
+            starCount={5}
+            value={1}
+          />
+          <div
+            className="singleExperience_ratingCount"
+          >
+            326
+          </div>
+        </div>
+      </div>,
+      "className": "singleExperience_container",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            className="singleExperience_img"
+            height="158"
+            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+            width="237"
+          />,
+          <div
+            className="singleExperience_categoryPlace"
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+          >
+            <span>
+              FORD
+            </span>
+             · 
+            <span>
+              CHINA
+            </span>
+          </div>,
+          <div
+            className="singleExperience_title"
+          >
+            Pseudoleistes virescens
+          </div>,
+          <div
+            className="singleExperience_price"
+          >
+            $
+            <span>
+              416
+            </span>
+             per person
+          </div>,
+          <div
+            className="singleExperience_rating"
+          >
+            <StarRatingComponent
+              editing={false}
+              emptyStarColor="#D8D8D8"
+              name="ratingStars"
+              starColor="#008489"
+              starCount={5}
+              value={1}
+            />
+            <div
+              className="singleExperience_ratingCount"
+            >
+              326
+            </div>
+          </div>,
+        ],
+        "className": "singleExperience_inner_container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "singleExperience_img",
+            "height": "158",
+            "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png",
+            "width": "237",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                FORD
+              </span>,
+              " · ",
+              <span>
+                CHINA
+              </span>,
+            ],
+            "className": "singleExperience_categoryPlace",
+            "style": Object {
+              "color": "#000",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FORD",
+              },
+              "ref": null,
+              "rendered": "FORD",
+              "type": "span",
+            },
+            " · ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CHINA",
+              },
+              "ref": null,
+              "rendered": "CHINA",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Pseudoleistes virescens",
+            "className": "singleExperience_title",
+          },
+          "ref": null,
+          "rendered": "Pseudoleistes virescens",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "$",
+              <span>
+                416
+              </span>,
+              " per person",
+            ],
+            "className": "singleExperience_price",
+          },
+          "ref": null,
+          "rendered": Array [
+            "$",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 416,
+              },
+              "ref": null,
+              "rendered": 416,
+              "type": "span",
+            },
+            " per person",
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <StarRatingComponent
+                editing={false}
+                emptyStarColor="#D8D8D8"
+                name="ratingStars"
+                starColor="#008489"
+                starCount={5}
+                value={1}
+              />,
+              <div
+                className="singleExperience_ratingCount"
+              >
+                326
+              </div>,
+            ],
+            "className": "singleExperience_rating",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "editing": false,
+                "emptyStarColor": "#D8D8D8",
+                "name": "ratingStars",
+                "starColor": "#008489",
+                "starCount": 5,
+                "value": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 326,
+                "className": "singleExperience_ratingCount",
+              },
+              "ref": null,
+              "rendered": 326,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="singleExperience_inner_container"
+        >
+          <img
+            className="singleExperience_img"
+            height="158"
+            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+            width="237"
+          />
+          <div
+            className="singleExperience_categoryPlace"
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+          >
+            <span>
+              FORD
+            </span>
+             · 
+            <span>
+              CHINA
+            </span>
+          </div>
+          <div
+            className="singleExperience_title"
+          >
+            Pseudoleistes virescens
+          </div>
+          <div
+            className="singleExperience_price"
+          >
+            $
+            <span>
+              416
+            </span>
+             per person
+          </div>
+          <div
+            className="singleExperience_rating"
+          >
+            <StarRatingComponent
+              editing={false}
+              emptyStarColor="#D8D8D8"
+              name="ratingStars"
+              starColor="#008489"
+              starCount={5}
+              value={1}
+            />
+            <div
+              className="singleExperience_ratingCount"
+            >
+              326
+            </div>
+          </div>
+        </div>,
+        "className": "singleExperience_container",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              className="singleExperience_img"
+              height="158"
+              src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+              width="237"
+            />,
+            <div
+              className="singleExperience_categoryPlace"
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            >
+              <span>
+                FORD
+              </span>
+               · 
+              <span>
+                CHINA
+              </span>
+            </div>,
+            <div
+              className="singleExperience_title"
+            >
+              Pseudoleistes virescens
+            </div>,
+            <div
+              className="singleExperience_price"
+            >
+              $
+              <span>
+                416
+              </span>
+               per person
+            </div>,
+            <div
+              className="singleExperience_rating"
+            >
+              <StarRatingComponent
+                editing={false}
+                emptyStarColor="#D8D8D8"
+                name="ratingStars"
+                starColor="#008489"
+                starCount={5}
+                value={1}
+              />
+              <div
+                className="singleExperience_ratingCount"
+              >
+                326
+              </div>
+            </div>,
+          ],
+          "className": "singleExperience_inner_container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "singleExperience_img",
+              "height": "158",
+              "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png",
+              "width": "237",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  FORD
+                </span>,
+                " · ",
+                <span>
+                  CHINA
+                </span>,
+              ],
+              "className": "singleExperience_categoryPlace",
+              "style": Object {
+                "color": "#000",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "FORD",
+                },
+                "ref": null,
+                "rendered": "FORD",
+                "type": "span",
+              },
+              " · ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "CHINA",
+                },
+                "ref": null,
+                "rendered": "CHINA",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Pseudoleistes virescens",
+              "className": "singleExperience_title",
+            },
+            "ref": null,
+            "rendered": "Pseudoleistes virescens",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "$",
+                <span>
+                  416
+                </span>,
+                " per person",
+              ],
+              "className": "singleExperience_price",
+            },
+            "ref": null,
+            "rendered": Array [
+              "$",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 416,
+                },
+                "ref": null,
+                "rendered": 416,
+                "type": "span",
+              },
+              " per person",
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <StarRatingComponent
+                  editing={false}
+                  emptyStarColor="#D8D8D8"
+                  name="ratingStars"
+                  starColor="#008489"
+                  starCount={5}
+                  value={1}
+                />,
+                <div
+                  className="singleExperience_ratingCount"
+                >
+                  326
+                </div>,
+              ],
+              "className": "singleExperience_rating",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "editing": false,
+                  "emptyStarColor": "#D8D8D8",
+                  "name": "ratingStars",
+                  "starColor": "#008489",
+                  "starCount": 5,
+                  "value": 1,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 326,
+                  "className": "singleExperience_ratingCount",
+                },
+                "ref": null,
+                "rendered": 326,
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
