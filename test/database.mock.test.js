@@ -50,7 +50,7 @@ describe('test mongoose SimExperience model', () => {
             experience_photo_url:"http://dummyimage.com/235x158.png/ff4444/ffffff"
     };
     
-    mockingoose.Experience.toReturn(mock, 'find');
+    mockingoose.simExperiences.toReturn(mock, 'find');
 
     return SimExperience
       .find({'experience_category':'Ford'})

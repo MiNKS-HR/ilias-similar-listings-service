@@ -36,14 +36,14 @@ ShallowWrapper {
         <img
           className="singleExperience_img"
           height="158"
-          src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+          src="http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg"
           width="237"
         />
         <div
           className="singleExperience_categoryPlace"
           style={
             Object {
-              "color": "#000",
+              "color": "#c4c4c4",
             }
           }
         >
@@ -100,14 +100,14 @@ ShallowWrapper {
           <img
             className="singleExperience_img"
             height="158"
-            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg"
             width="237"
           />,
           <div
             className="singleExperience_categoryPlace"
             style={
               Object {
-                "color": "#000",
+                "color": "#c4c4c4",
               }
             }
           >
@@ -162,7 +162,7 @@ ShallowWrapper {
           "props": Object {
             "className": "singleExperience_img",
             "height": "158",
-            "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png",
+            "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg",
             "width": "237",
           },
           "ref": null,
@@ -185,7 +185,7 @@ ShallowWrapper {
             ],
             "className": "singleExperience_categoryPlace",
             "style": Object {
-              "color": "#000",
+              "color": "#c4c4c4",
             },
           },
           "ref": null,
@@ -332,14 +332,14 @@ ShallowWrapper {
           <img
             className="singleExperience_img"
             height="158"
-            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+            src="http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg"
             width="237"
           />
           <div
             className="singleExperience_categoryPlace"
             style={
               Object {
-                "color": "#000",
+                "color": "#c4c4c4",
               }
             }
           >
@@ -396,14 +396,14 @@ ShallowWrapper {
             <img
               className="singleExperience_img"
               height="158"
-              src="http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png"
+              src="http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg"
               width="237"
             />,
             <div
               className="singleExperience_categoryPlace"
               style={
                 Object {
-                  "color": "#000",
+                  "color": "#c4c4c4",
                 }
               }
             >
@@ -458,7 +458,7 @@ ShallowWrapper {
             "props": Object {
               "className": "singleExperience_img",
               "height": "158",
-              "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1519579177/ff4444ffffff.png",
+              "src": "http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/ff4444ffffff.jpg",
               "width": "237",
             },
             "ref": null,
@@ -481,7 +481,7 @@ ShallowWrapper {
               ],
               "className": "singleExperience_categoryPlace",
               "style": Object {
-                "color": "#000",
+                "color": "#c4c4c4",
               },
             },
             "ref": null,

@@ -13,7 +13,7 @@ var similarExperience = mongoose.Schema({
 });
 similarExperience.plugin(random);
 
-var SimExperience = mongoose.model('Experience', similarExperience);
+var SimExperience = mongoose.model('simExperiences', similarExperience);
 
 function find16Random(callback) {
   SimExperience.findRandom({}, {}, {limit: 16}, function(err, results) {
