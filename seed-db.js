@@ -37,10 +37,20 @@ var download = function(url, dest, callback){
 
 };
 
+var downloadRealPhotos = function () {
+  let url = 'http://lorempixel.com/237/158';
+  let filename = 0;
+  for (let i = 0; i < 10; i++) {
+    download(url, __dirname + `/client/pictures/${filename}.png`, function(){console.log('Finished Downloading' + filename)});
+    filename+=1;
+  }
+}
+
 
 // download('http://dummyimage.com/235x158.png/dddddd/000000', './pictures/google.png', function(){
 //   console.log('done');
 // });
-getArrayOfAllPictureLinks();
-//seedDb();
+//downloadRealPhotos();
+//getArrayOfAllPictureLinks();
+seedDb();
 

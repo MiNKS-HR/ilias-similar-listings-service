@@ -4,6 +4,7 @@ import SingleExperience from './SingleExperience.jsx';
 import Slider from 'react-slick';
 import axios from 'axios';
 import $ from 'jquery';
+import Vibrant from 'node-vibrant';
 //import createHistory from 'history/createBrowserHistory';
 import history from '../history.js';
  
@@ -15,7 +16,8 @@ class SimilarExperience extends React.Component {
     this.state = {
       currentMainExperience: {},
       currentSimilarExperiences: [],
-      slickGoTo:0
+      slickGoTo:0,
+      fontColors: []
     }
     
     this.fetch = this.fetch.bind(this);
@@ -23,6 +25,7 @@ class SimilarExperience extends React.Component {
     this.createSimilar = this.createSimilar.bind(this);
     this.createMain = this.createMain.bind(this);
     this.handleSimilarClick = this.handleSimilarClick.bind(this);
+    this.setColors = this.setColors.bind(this);
   }
 
   componentDidMount() {
@@ -48,7 +51,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      console.log('Errorhhhh');
+      console.log('ErrorID');
     });
   }
 
@@ -59,7 +62,7 @@ class SimilarExperience extends React.Component {
       callback(response.data)
     })
     .catch(function (error) {
-      console.log('Errorhhhh');
+      console.log('ErrorLOC');
     });
   }
 
@@ -73,10 +76,26 @@ class SimilarExperience extends React.Component {
 
   createSimilar(loc) {
     this.fetchLocations(loc, (data) => {
+      data.forEach((l) => this.setColors(l));
       this.setState({
         currentSimilarExperiences: data
       });
     })
+  }
+
+  setColors(location) {
+    const url = location.experience_photo_url;
+    let curPhotoNum = url.split('.png').join('').split('/').join('').substring(url.length-21);
+    let path = `http://res.cloudinary.com/dkchqxebb/image/upload/v1520128059/${curPhotoNum}.jpg`;
+    let v = new Vibrant(path);
+    return v.getPalette((err, palette) => {
+      let newColor = palette.Vibrant.getHex();
+      if(newColor) {
+        this.setState({
+          fontColors: [...this.state.fontColors, ...[{color: newColor, id: location.id }]]
+        })
+      }
+    });
   }
 
   handleSimilarClick (id) {
@@ -84,7 +103,8 @@ class SimilarExperience extends React.Component {
     this.createSimilar('China');
     //history.push(`/id/${id}`);
     this.setState({
-      slickGoTo:0
+      slickGoTo:0,
+      fontColors: []
     })
   }
 
@@ -113,14 +133,14 @@ class SimilarExperience extends React.Component {
         }
       },
       {
-        breakpoint: 770,
+        breakpoint: 850,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -140,7 +160,7 @@ class SimilarExperience extends React.Component {
                         handleSimilarClick={this.handleSimilarClick}
                         currentSimExperience={item} 
                         currentMainExperience={this.state.currentMainExperience}
-                        
+                        fontColor={this.state.fontColors.find((c) => c.id === item.id)}
                         />
                     </div>
           })
