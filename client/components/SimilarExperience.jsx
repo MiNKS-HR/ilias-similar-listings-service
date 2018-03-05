@@ -29,9 +29,17 @@ class SimilarExperience extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.pathname);
-    //history.push(this.props.pathname)
+    // const url = window.location.href;
+    // let curId = url.split('/')[4];
+    // console.log('ID', curId);
+    // console.log(this.props.pathname);
+    // if(!curId) {
+    //   history.push('/id/1');
+    //   curId = 1;
+    // }
+    // //history.push(this.props.pathname)
     this.createMain(this.props.pathname.substr(4));
+    ///this.createMain(curId);
     this.createSimilar('China');
   }
 

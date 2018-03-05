@@ -26,6 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname + '/../public')));
 
+app.get('/id/:id', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../public/index.html'));
+});
+
 app.get('/experience/similar/:id', function(req, res) {
   let id = req.params.id;
   console.log('URL', req.url)
