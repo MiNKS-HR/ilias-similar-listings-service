@@ -1,0 +1,125 @@
+body {
+  font-family: 'Helvetica Neue';
+}
+.simExpApp {
+  max-width: 1032px;
+}
+
+.simExpMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 98%;
+  height: 275px;
+  margin-left: 8px;
+  margin-left: 8px;
+}
+.simExpHeadline {
+  padding-left: 14px;
+  font-weight: 700;
+  color: #484848;
+  font-size: 1em;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+ }
+
+ /*taken out width of 237px*/
+.singleExperience_container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 278px;
+  padding: 0 6px 30px 6px;
+}
+
+.singleExperience_inner_container {
+
+}
+
+.singleExperience_title {
+  color: #484848;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+
+.singleExperience_price {
+  color: #484848;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+}
+
+.singleExperience_rating {
+  display: inline-flex;
+}
+
+.singleExperience_ratingCount {
+  display: inline;
+  color: #484848;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  padding-top: 4px;
+  padding-left: 2px;
+}
+
+.singleExperience_categoryPlace{
+  color: rgb(208, 26, 6);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px
+}
+
+
+
+.singleExperience_img {
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+.slick-initialized,
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-next:before, 
+.slick-prev:before {
+  color: #c4c4c4;
+  opacity: 1;
+  font-size: 45px;
+}
+
+.slick-next.slick-disabled:before,
+.slick-prev.slick-disabled:before {
+  opacity: 0;
+}
+
+.slick-next,
+.slick-prev {
+  top: 79px;
+}
+
+.slick-prev {
+  left: -15px;
+  z-index: 1000;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+i  {
+  font-size: 9px;
+}
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
