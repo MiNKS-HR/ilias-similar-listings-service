@@ -24,13 +24,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname + '/../public')));
+
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/../public/index.html')));
+app.use('/similar/content', express.static(path.join(__dirname + '/../public')));
 
 app.get('/id/:id', (req, res) => {
   res.sendFile(path.join(__dirname + '/../public/index.html'));
 });
 
-app.get('/experience/similar/:id', function(req, res) {
+app.get('/similar/id/:id', function(req, res) {
   let id = req.params.id;
   console.log('URL', req.url)
   simExp.findOne(id, function(exp) {
@@ -39,7 +41,7 @@ app.get('/experience/similar/:id', function(req, res) {
   })
 });
 
-app.get('/experience/similar/location/:location', function(req, res) {
+app.get('/similar/location/:location', function(req, res) {
   let loc = req.params.location;
   console.log(loc);
   // simExp.findLocation(loc, function(exp) {

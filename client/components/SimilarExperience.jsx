@@ -53,7 +53,7 @@ class SimilarExperience extends React.Component {
   }
 
   fetch(id, callback) {
-    axios.get( `/experience/similar/${id}`)
+    axios.get( `/similar/id/${id}`)
     .then(function (response) {
       console.log('Success', response.data);
       callback(response.data)
@@ -64,7 +64,7 @@ class SimilarExperience extends React.Component {
   }
 
   fetchLocations(loc, callback) {
-    axios.get(`/experience/similar/location/${loc}`)
+    axios.get(`/similar/location/${loc}`)
     .then(function (response) {
       console.log('Success', response.data);
       callback(response.data)
