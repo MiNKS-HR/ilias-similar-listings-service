@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  smiliar:
+    build: similar/
+    depends_on:
+      - 'database'
+    ports: 
+      - '3003:4000'
+
+  proxy:
+    build: proxy/
+    depends_on:
+      - 'smilar'
+    ports:
+      - '3000:3000'
+
+  database:
+    image: mongo:latest
