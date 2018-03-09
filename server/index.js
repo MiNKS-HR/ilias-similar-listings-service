@@ -17,7 +17,7 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
 
-mongoose.connect('mongodb://localhost:27017/experiences');
+mongoose.connect('mongodb://database/experiences');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))

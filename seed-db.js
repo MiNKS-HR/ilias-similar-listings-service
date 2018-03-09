@@ -4,7 +4,7 @@ var simExp = require('./db/model.js');
 var fs = require('fs');
 var request = require('request');
 
-mongoose.connect('mongodb://localhost:27017/experiences');
+mongoose.connect('mongodb://database/experiences');
 
 
 var seedDb = function() {
