@@ -4,7 +4,7 @@ var simExp = require('./db/model.js');
 var fs = require('fs');
 var request = require('request');
 
-mongoose.connect('mongodb://localhost/experiences');
+mongoose.connect('mongodb://localhost:27017/experiences');
 
 
 var seedDb = function() {
@@ -50,7 +50,11 @@ var downloadRealPhotos = function () {
 // download('http://dummyimage.com/235x158.png/dddddd/000000', './pictures/google.png', function(){
 //   console.log('done');
 // });
+//For downloading some real random photos but some are hosted on clouderly
 //downloadRealPhotos();
+
+//Gets all the photos listed in the database/MockList
 //getArrayOfAllPictureLinks();
+
 seedDb();
 

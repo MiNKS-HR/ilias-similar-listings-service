@@ -14,9 +14,13 @@ const supertest = require('supertest');
 
 describe('Test the root path', () => {
 
+  beforeAll(async () => {
+    jest.setTimeout(10000);
+  });
+
   test('to return JSON from the experience/similar route', () => {
     request(app)
-      .get('/experience/similar/7')
+      .get('/similar/id/111')
       .expect('Content-Type', /json/)
       .expect(200)
       .end((err, res) => {
@@ -31,7 +35,7 @@ describe('Test the root path', () => {
     expect(response.statusCode).toBe(200);
   });
   test('It should respond with 404 from a wrong path', async () => {
-    const response = await supertest(app).get('/wrongPath');
+    const response = await supertest(app).get('/experience/wrong');
     expect(response.statusCode).toBe(404);
   });
   //DOES NOT PASS ON CIRCLE CI YET BUT LOCALLY USING ACTUALY SEEDED DATABASE!

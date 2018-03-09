@@ -17,7 +17,7 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
 
-mongoose.connect('mongodb://localhost/experiences');
+mongoose.connect('mongodb://localhost:27017/experiences');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -25,12 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(morgan('dev'));
 
+
+app.get('/:id', (req, res) => res.sendFile(path.join(__dirname + '/../public/index.html')));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/../public/index.html')));
 app.use('/similar/content', express.static(path.join(__dirname + '/../public')));
-
-app.get('/id/:id', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/index.html'));
-});
 
 app.get('/similar/id/:id', function(req, res) {
   let id = req.params.id;

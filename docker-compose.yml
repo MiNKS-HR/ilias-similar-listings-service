@@ -1,19 +1,25 @@
 version: '3'
 
 services:
-  smiliar:
-    build: similar/
+  similar:
+    build: .
     depends_on:
       - 'database'
     ports: 
-      - '3003:4000'
-
-  proxy:
-    build: proxy/
-    depends_on:
-      - 'smilar'
-    ports:
-      - '3000:3000'
+      - '80:3003'
 
   database:
     image: mongo:latest
+
+  # proxy:
+  #   build: proxy/
+  #   depends_on:
+  #     - 'smilar'
+  #   ports:
+  #     - '4000:4000'
+
+  # database:
+  #   image: mongo:latest
+
+  # docker tag imageID ischulz/similar:initial
+  # docker push ischulz/similar:initial

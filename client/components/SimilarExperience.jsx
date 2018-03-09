@@ -29,28 +29,34 @@ class SimilarExperience extends React.Component {
   }
 
   componentDidMount() {
-    // const url = window.location.href;
-    // let curId = url.split('/')[4];
-    // console.log('ID', curId);
+    const url = window.location.href;
+    let curId = url.split('/')[3];
+    if (!curId || curId === '') {
+      curId = 1;
+    }
+    console.log('ID', Number(curId));
     // console.log(this.props.pathname);
     // if(!curId) {
     //   history.push('/id/1');
     //   curId = 1;
     // }
     // //history.push(this.props.pathname)
-    this.createMain(this.props.pathname.substr(4));
-    ///this.createMain(curId);
+    //this.createMain(this.props.pathname.substr(4));
+    this.createMain(curId);
+    //Currently random 16 entries. We didnt have appropriate 
+    //Data in the Database for a proper similar entries function
     this.createSimilar('China');
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.pathname !== this.props.pathname) {
-      console.log(nextProps.pathname.substr(4));
-      this.createMain(nextProps.pathname.substr(4));
-      this.createSimilar('United States');
-      Slider.SlickGoTo(1);
-    }
-  }
+//Stuff I tried for Routing
+  // componentWillReceiveProps(nextProps) {
+  //   if(nextProps.pathname !== this.props.pathname) {
+  //     console.log(nextProps.pathname.substr(4));
+  //     this.createMain(nextProps.pathname.substr(4));
+  //     this.createSimilar('United States');
+  //     Slider.SlickGoTo(1);
+  //   }
+  // }
 
   fetch(id, callback) {
     axios.get( `/similar/id/${id}`)
